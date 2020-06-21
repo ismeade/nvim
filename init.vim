@@ -1,4 +1,4 @@
-" ==============================
+" =============================
 " base set
 " ==============================
 set number
@@ -7,6 +7,8 @@ set cursorline
 set wrap
 set showcmd
 set wildmenu
+
+set mouse=a
 
 set hlsearch
 exec "nohlsearch"
@@ -38,7 +40,7 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-set list lcs=tab:\|\ 
+set list lcs=tab:\.\ 
 
 filetype on
 filetype indent on
@@ -79,6 +81,7 @@ nmap <silent> <LEADER>wh <C-w>h
 " tab
 nmap <silent> <LEADER><TAB>n :tabe<CR>
 nmap <silent> <LEADER><TAB><TAB> :tabnext<CR>
+nmap <silent> <LEADER><TAB>d :tabclose<CR>
 
 " plug
 nmap <LEADER>pi :PlugInstall<CR>
@@ -122,6 +125,8 @@ colorscheme gruvbox
 " nerdtree
 " ==============================
 nmap <silent> <LEADER>tt :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 
 " ==============================
 " vim-go
@@ -138,6 +143,9 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
 
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
 " ==============================
 " indentLine
 " ==============================
@@ -150,8 +158,11 @@ let g:mkdp_browser = 'google-chrome-stable'
 " ==============================
 " fzf
 " ==============================
-nmap <silent> <LEADER>ff :Files<CR>
-nmap <silent> <LEADER>fg :GFiles<CR>
-nmap <silent> <LEADER>fb :Buffers<CR>
-nmap <silent> <LEADER>fr :History<CR>
-nmap <silent> <LEADER>fm :Maps<CR>
+nmap <silent> <LEADER>sf :Files<CR>
+nmap <silent> <LEADER>sg :GFiles<CR>
+nmap <silent> <LEADER>sb :Buffers<CR>
+nmap <silent> <LEADER>sr :History<CR>
+nmap <silent> <LEADER>sm :Maps<CR>
+nmap <silent> <LEADER>ss :BLines<CR>
+
+
