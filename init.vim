@@ -8,6 +8,9 @@ set wrap
 set showcmd
 set wildmenu
 
+" 拼写检查
+" set spell
+
 set mouse=a
 
 set hlsearch
@@ -83,6 +86,7 @@ nmap <silent> <LEADER>qw :wq<CR>
 
 " file
 nmap <silent> <LEADER>fs :w<CR>
+imap <silent> <C-s> <ESC>:w<CR>a
 
 " buffer
 nmap <silent> <LEADER>b[ :bprevious<CR>
@@ -105,6 +109,8 @@ nmap <silent> <LEADER><TAB>d :tabclose<CR>
 " plug
 nmap <LEADER>pi :PlugInstall<CR>
 
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
 " ==============================
 " plug
 " ==============================
@@ -118,6 +124,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go'
 Plug 'itchyny/vim-cursorword'
+Plug 'lfv89/vim-interestingwords'
 Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdcommenter'
@@ -132,7 +139,7 @@ call plug#end()
 " airline
 " ==============================
 let laststatus = 2
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#left_sep = ' '   "tabline中未激活buffer两端的分隔字符
 " let g:airline#extensions#tabline#left_alt_sep = '|'      "tabline中buffer显示编号
 " let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -150,14 +157,16 @@ colorscheme gruvbox
 " nerdtree
 " ==============================
 nmap <silent> <LEADER>tt :NERDTreeToggle<CR>
+let g:NERDTreeMapActivateNode = '<tab>'
+
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
 " ==============================
 " coc
 " ==============================
-"inoremap <silent> <C-j> <C-n>
-"inoremap <silent> <C-k> <C-p>
+inoremap <silent> <C-j> <C-n>
+inoremap <silent> <C-k> <C-p>
 
 "inoremap <silent><expr> <TAB>
       "\ pumvisible() ? "\<C-n>" :
@@ -236,5 +245,6 @@ nmap <silent> <LEADER>sb :Buffers<CR>
 nmap <silent> <LEADER>sr :History<CR>
 nmap <silent> <LEADER>sm :Maps<CR>
 nmap <silent> <LEADER>ss :BLines<CR>
+nmap <silent> <LEADER>sa :Lines<CR>
 
 
