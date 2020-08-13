@@ -51,25 +51,6 @@ filetype plugin on
 filetype plugin indent on
 
 " ==============================
-" 符号补全
-" ==============================
-"inoremap ( ()<ESC>i
-"inoremap ) <c-r>=ClosePair(')')<CR>
-"inoremap { {<CR>}<ESC>O
-"inoremap } <c-r>=ClosePair('}')<CR>
-"inoremap [ []<ESC>i
-"inoremap ] <c-r>=ClosePair(']')<CR>
-"inoremap " ""<ESC>i
-"inoremap ' ''<ESC>i
-"function! ClosePair(char)
-    "if getline('.')[col('.') - 1] == a:char
-        "return "\<Right>"
-    "else
-        "return a:char
-    "endif
-"endfunction
-
-" ==============================
 " keymap
 " ==============================
 
@@ -77,14 +58,15 @@ filetype plugin indent on
 let mapleader=" "
 
 " source 
-nmap R :source $MYVIMRC<CR>
+nmap <LEADER>er :source $MYVIMRC<CR>
+nmap <LEADER>ee :e $MYVIMRC<CR>
 
 " quit
 nmap <silent> <LEADER>qq :q<CR>
 nmap <silent> <LEADER>qa :qa<CR>
 nmap <silent> <LEADER>qw :wq<CR>
 
-" file
+" save
 nmap <silent> <LEADER>fs :w<CR>
 imap <silent> <C-s> <ESC>:w<CR>a
 
@@ -109,6 +91,7 @@ nmap <silent> <LEADER><TAB>d :tabclose<CR>
 " plug
 nmap <LEADER>pi :PlugInstall<CR>
 
+" editer
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 " ==============================
@@ -131,7 +114,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'junegunn/fzf.vim'
-" Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
