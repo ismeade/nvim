@@ -32,8 +32,8 @@ set scrolloff=4
 set syntax=on
 
 set hidden
-set nobackup
-set nowritebackup
+set updatetime=300
+set shortmess+=c
 "set dir=~/.vim/tmp
 
 " 设置超过80长度提示
@@ -74,7 +74,7 @@ imap <silent> <C-s> <ESC>:w<CR>a
 nmap <silent> <LEADER>b[ :bprevious<CR>
 nmap <silent> <LEADER>b] :bnext<CR>
 nmap <silent> <LEADER>bd :bdelete<CR>
-nmap <silent> <LEADER>bb :Buffers<CR>
+nmap <silent> <LEADER>bb :buffers<CR>
 
 " window
 nmap <silent> <LEADER>wv :vsp<CR>
@@ -114,7 +114,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'junegunn/fzf.vim'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -148,30 +148,26 @@ let g:NERDTreeDirArrowCollapsible = '-'
 " ==============================
 " coc
 " ==============================
-inoremap <silent> <C-j> <C-n>
-inoremap <silent> <C-k> <C-p>
-
-"inoremap <silent><expr> <TAB>
-      "\ pumvisible() ? "\<C-n>" :
-      "\ <SID>check_back_space() ? "\<TAB>" :
-      "\ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-"function! s:check_back_space() abort
-  "let col = col('.') - 1
-  "return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
+let g:coc_global_extensions = [
+ \ 'coc-go',
+ \ 'coc-json',
+ \ 'coc-yaml',
+ \ 'coc-vimlsp',
+ \ 'coc-pairs',
+ \ 'coc-snippets']
 
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+inoremap <silent><expr> <c-d> coc#refresh()
 
 let g:coc_snippet_next = '<tab>'
 
@@ -218,6 +214,7 @@ nnoremap <leader>ga :cclose<CR>
 " markdown-preview
 " ==============================
 let g:mkdp_browser = 'google-chrome-stable'
+let g:mkdp_page_title = '${name}'
 
 " ==============================
 " fzf
