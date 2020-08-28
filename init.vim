@@ -44,7 +44,6 @@ let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set list lcs=tab:\.\ 
-
 filetype on
 filetype indent on
 filetype plugin on
@@ -99,18 +98,24 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 " ==============================
 call plug#begin('~/.config/nvim/plugged')
 
+"UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
+Plug 'mhinz/vim-startify'
+
+"CODE
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'honza/vim-snippets'
-Plug 'fatih/vim-go'
+"Plug 'honza/vim-snippets'
+Plug 'preservim/nerdcommenter'
 Plug 'itchyny/vim-cursorword'
 Plug 'lfv89/vim-interestingwords'
-Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/indentLine'
-Plug 'preservim/nerdcommenter'
+
+"GO
+Plug 'fatih/vim-go'
+
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'junegunn/fzf.vim'
@@ -170,6 +175,7 @@ endfunction
 inoremap <silent><expr> <c-d> coc#refresh()
 
 let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_prev = '<s-tab>'
 
 if exists('*complete_info')
   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -182,6 +188,8 @@ nmap <silent> <leader>jd <Plug>(coc-definition)
 nmap <silent> <leader>jy <Plug>(coc-type-definition)
 nmap <silent> <leader>ji <Plug>(coc-implementation)
 nmap <silent> <leader>jr <Plug>(coc-references)
+
+let g:snips_author = 'Liyang'
 
 " ==============================
 " vim-go

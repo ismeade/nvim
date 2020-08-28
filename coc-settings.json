@@ -2,10 +2,6 @@
     "coc.preferences.extensionUpdateCheck": "daily",
     "suggest.noselect": true,
     "suggest.enablePreselect": false,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "json"
-    ],
-    "yaml.format.enable": true,
     "suggest.completionItemKindLabels": {
         "class": "\uf0e8",
         "color": "\ue22b",
@@ -33,6 +29,9 @@
         "value": "\uf89f",
         "variable": "\ue71b"
     },
+    "snippets.ultisnips.directories": [
+        "$HOME/.config/nvim/Ultisnips/"
+    ],
     "diagnostic.signOffset": 1,
     "diagnostic.errorSign": "\uf467",
     "diagnostic.warningSign": "\uf071",
@@ -44,6 +43,10 @@
     "diagnostic.checkCurrentLine": true,
     "diagnostic.virtualTextPrefix": " ❯❯❯ ",
     "diagnostic.virtualText": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "json"
+    ],
+    "yaml.format.enable": true,
     "codeLens.enable": true,
     "languageserver": {
         "golang": {
