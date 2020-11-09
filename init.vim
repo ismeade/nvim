@@ -49,6 +49,8 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 
+let g:loaded_python_provider = 0
+
 " ==============================
 " keymap
 " ==============================
@@ -155,6 +157,7 @@ let g:NERDTreeDirArrowCollapsible = '-'
 " ==============================
 let g:coc_global_extensions = [
  \ 'coc-go',
+ \ 'coc-java',
  \ 'coc-json',
  \ 'coc-yaml',
  \ 'coc-vimlsp',
@@ -202,6 +205,9 @@ nmap <silent> <leader>jd <Plug>(coc-definition)
 nmap <silent> <leader>jy <Plug>(coc-type-definition)
 nmap <silent> <leader>ji <Plug>(coc-implementation)
 nmap <silent> <leader>jr <Plug>(coc-references)
+"nmap <c-]> <Plug>(coc-definition)
+"nmap <c-[> <c-o>
+
 
 let g:snips_author = 'Liyang'
 
