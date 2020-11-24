@@ -161,6 +161,7 @@ let g:coc_global_extensions = [
  \ 'coc-json',
  \ 'coc-yaml',
  \ 'coc-vimlsp',
+ \ 'coc-template',
  \ 'coc-pairs',
  \ 'coc-snippets']
 
@@ -205,11 +206,20 @@ nmap <silent> <leader>jd <Plug>(coc-definition)
 nmap <silent> <leader>jy <Plug>(coc-type-definition)
 nmap <silent> <leader>ji <Plug>(coc-implementation)
 nmap <silent> <leader>jr <Plug>(coc-references)
+nmap <silent> <leader>cf <Plug>(coc-format) 
+nmap <silent> <M-i> <Plug>(coc-codeaction)
+nmap <silent> <leader>cl <Plug>(coc-codelens-action)
+nmap <silent> <M-cr> <Plug>(coc-fix-current)
+nmap <silent> <leader>ct <Plug>(coc-template-top)
 "nmap <c-]> <Plug>(coc-definition)
 "nmap <c-[> <c-o>
 
 
 let g:snips_author = 'Liyang'
+
+"autocmd BufNewFile .gitignore CocCommand template.templateTop
+autocmd BufNewFile .java CocCommand template.templateTop
+"autocmd BufNewFile .go CocCommand template.templateTop
 
 " ==============================
 " vim-go
