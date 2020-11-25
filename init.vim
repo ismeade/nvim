@@ -43,6 +43,8 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+set clipboard+=unnamedplus
+
 set list lcs=tab:\.\ 
 filetype on
 filetype indent on
@@ -120,6 +122,7 @@ Plug 'fatih/vim-go'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "Plug 'jiangmiao/auto-pairs'
 
