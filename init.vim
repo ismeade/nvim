@@ -68,6 +68,8 @@ nmap <LEADER>ee :e $MYVIMRC<CR>
 nmap <silent> <LEADER>qq :q<CR>
 nmap <silent> <LEADER>qa :qa<CR>
 nmap <silent> <LEADER>qw :wq<CR>
+nmap <silent> <LEADER>Q :q!<CR>
+nmap <silent> <LEADER>Qw :qw!<CR>
 
 " save
 nmap <silent> <LEADER>fs :w<CR>
@@ -155,6 +157,8 @@ let g:NERDTreeMapActivateNode = '<tab>'
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
+let NERDTreeWinSize=40
+
 " ==============================
 " coc
 " ==============================
@@ -165,6 +169,7 @@ let g:coc_global_extensions = [
  \ 'coc-yaml',
  \ 'coc-vimlsp',
  \ 'coc-template',
+ \ 'coc-todolist',
  \ 'coc-pairs',
  \ 'coc-snippets']
 
@@ -223,6 +228,10 @@ let g:snips_author = 'Liyang'
 "autocmd BufNewFile .gitignore CocCommand template.templateTop
 autocmd BufNewFile .java CocCommand template.templateTop
 "autocmd BufNewFile .go CocCommand template.templateTop
+
+" todolist
+nmap <silent> <leader>tc :CocCommand todolist.create<CR>
+nmap <silent> <leader>tl :CocList todolist<CR>
 
 " ==============================
 " vim-go
