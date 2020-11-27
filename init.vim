@@ -177,7 +177,6 @@ let NERDTreeWinSize=40
 " coc
 " ==============================
 let g:coc_global_extensions = [
- \ 'coc-go',
  \ 'coc-java',
  \ 'coc-json',
  \ 'coc-yaml',
@@ -247,6 +246,7 @@ autocmd BufNewFile .java CocCommand template.templateTop
 nmap <silent> <leader>tc :CocCommand todolist.create<CR>
 nmap <silent> <leader>tl :CocList todolist<CR>
 
+"autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 " ==============================
 " vim-go
 " ==============================
