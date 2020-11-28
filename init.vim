@@ -111,12 +111,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'mhinz/vim-startify'
 
+<<<<<<< HEAD
 "DIR
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 
-"CODE
+"EDIT
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'honza/vim-snippets'
 Plug 'preservim/nerdcommenter'
@@ -124,6 +125,7 @@ Plug 'itchyny/vim-cursorword'
 Plug 'lfv89/vim-interestingwords'
 Plug 'Yggdroot/indentLine'
 Plug 'kdheepak/lazygit.nvim'
+Plug 'gcmt/wildfire.vim'
 
 "GO
 Plug 'fatih/vim-go'
