@@ -111,7 +111,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'mhinz/vim-startify'
 
-<<<<<<< HEAD
 "DIR
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
