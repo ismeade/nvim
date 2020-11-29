@@ -123,7 +123,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'itchyny/vim-cursorword'
 Plug 'lfv89/vim-interestingwords'
 Plug 'Yggdroot/indentLine'
-Plug 'kdheepak/lazygit.nvim'
+Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'gcmt/wildfire.vim'
 
 "GO
