@@ -134,6 +134,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "Plug 'jiangmiao/auto-pairs'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -316,3 +317,16 @@ nmap <silent> <LEADER>sa :Lines<CR>
 noremap <silent> <leader>lg :LazyGit<CR>
 let g:lazygit_floating_window_winblend = 0 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
+
+" ==============================
+" floaterm
+" ==============================
+let g:floaterm_position = 'bottomright'
+let g:floaterm_width = 0.6
+let g:floaterm_height = 0.4
+let g:floaterm_autoclose = 1
+
+let g:floaterm_keymap_toggle = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_new    = '<F10>'
