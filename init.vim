@@ -167,9 +167,9 @@ let g:NERDTreeDirArrowCollapsible = '-'
 let NERDTreeWinSize=40
 
 " 没有指定文件时，自动打开，启动页会无效
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
-"autocmd VimEnter * if argc() == 0 | NERDTreeToggle | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == "" | NERDTree | endif
+"autocmd VimEnter * if argc() == 0 | :NERDTreeToggle | endif
 
 " 打开目录时，自动打开，启动页会无效
 "autocmd StdinReadPre * let s:std_in=1
@@ -241,7 +241,7 @@ nmap <silent> <leader>ct <Plug>(coc-template-top)
 let g:snips_author = 'Liyang'
 
 "autocmd BufNewFile .gitignore CocCommand template.templateTop
-autocmd BufNewFile .java CocCommand template.templateTop
+"autocmd BufNewFile .java CocCommand template.templateTop
 "autocmd BufNewFile .go CocCommand template.templateTop
 
 " todolist
@@ -316,6 +316,3 @@ nmap <silent> <LEADER>sa :Lines<CR>
 noremap <silent> <leader>lg :LazyGit<CR>
 let g:lazygit_floating_window_winblend = 0 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
-let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
-"let g:lazygit_floating_window_corner_chars = ['+', '+', '+', '+'] " customize lazygit popup window corner characters
-let g:lazygit_use_neovim_remote = 1 " for neovim-remote support

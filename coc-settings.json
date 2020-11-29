@@ -32,7 +32,6 @@
     "snippets.ultisnips.directories": [
         "$HOME/.config/nvim/Ultisnips/"
     ],
-    "diagnostic.signOffset": 1,
     "diagnostic.errorSign": "\uf467",
     "diagnostic.warningSign": "\uf071",
     "diagnostic.infoSign": "\uf129",
@@ -60,5 +59,7 @@
             ]
         }
     },
-    "java.home": "/usr/lib/jvm/java-11-openjdk"
+    "java.home": "/usr/lib/jvm/java-11-openjdk",
+    "todolist.easyMode": true,
+    "todolist.autoUpload": true
 }
