@@ -62,43 +62,61 @@ let g:loaded_python_provider = 0
 let mapleader=" "
 
 " source 
-nmap <LEADER>er :source $MYVIMRC<CR>
-nmap <LEADER>ee :e $MYVIMRC<CR>
+nnoremap <LEADER>er :source $MYVIMRC<CR>
+nnoremap <LEADER>ee :e $MYVIMRC<CR>
 
 " quit
-nmap <silent> <LEADER>qq :q<CR>
-nmap <silent> <LEADER>qa :qa<CR>
-nmap <silent> <LEADER>qw :wq<CR>
-nmap <silent> <LEADER>Q :q!<CR>
-nmap <silent> <LEADER>Qw :qw!<CR>
+nnoremap <silent> <LEADER>qq :q<CR>
+nnoremap <silent> <LEADER>qa :qa<CR>
+nnoremap <silent> <LEADER>qw :wq<CR>
+nnoremap <silent> <LEADER>Q :q!<CR>
+nnoremap <silent> <LEADER>Qw :qw!<CR>
 
 " save
-nmap <silent> <LEADER>fs :w<CR>
-imap <silent> <C-s> <ESC>:w<CR>a
+nnoremap <silent> <LEADER>fs :w<CR>
+inoremap <silent> <C-s> <ESC>:w<CR>a
 
 " buffer
-nmap <silent> <LEADER>b[ :bprevious<CR>
-nmap <silent> <LEADER>b] :bnext<CR>
-nmap <silent> <LEADER>bd :bdelete<CR>
-nmap <silent> <LEADER>bb :buffers<CR>
+nnoremap <silent> <LEADER>b[ :bprevious<CR>
+nnoremap <silent> <LEADER>b] :bnext<CR>
+nnoremap <silent> <LEADER>bd :bdelete<CR>
+nnoremap <silent> <LEADER>bb :buffers<CR>
 
 " window
-nmap <silent> <LEADER>wv :vsp<CR>
-nmap <silent> <LEADER>ww <C-w><C-w>
-nmap <silent> <LEADER>wq <C-w>q
-nmap <silent> <LEADER>wl <C-w>l
-nmap <silent> <LEADER>wh <C-w>h
+nnoremap <silent> <LEADER>wv :vsp<CR>
+nnoremap <silent> <LEADER>ww <C-w><C-w>
+nnoremap <silent> <LEADER>wq <C-w>q
+nnoremap <silent> <LEADER>wl <C-w>l
+nnoremap <silent> <LEADER>wh <C-w>h
 
 " tab
-nmap <silent> <LEADER><TAB>n :tabe<CR>
-nmap <silent> <LEADER><TAB><TAB> :tabnext<CR>
-nmap <silent> <LEADER><TAB>d :tabclose<CR>
+nnoremap <silent> <LEADER><TAB>n :tabe<CR>
+nnoremap <silent> <LEADER><TAB><TAB> :tabnext<CR>
+nnoremap <silent> <LEADER><TAB>d :tabclose<CR>
 
 " plug
-nmap <LEADER>pi :PlugInstall<CR>
+nnoremap <LEADER>pi :PlugInstall<CR>
 
 " editer
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
+" disable <Up><Down><Left><Right>
+nnoremap <silent> <Up> <nop>
+nnoremap <silent> <Down> <nop>
+nnoremap <silent> <Left> <nop>
+nnoremap <silent> <Right> <nop>
+
+inoremap <silent> <Up> <nop>
+inoremap <silent> <Down> <nop>
+inoremap <silent> <Left> <nop>
+inoremap <silent> <Right> <nop>
+
+if system('uname -r') =~ 'Microsoft'
+    augroup Yank
+        autocmd!
+        autocmd TextYankPost * :call system('clip.exe ',@w)
+    augroup END
+endif
 
 " ==============================
 " plug
@@ -180,10 +198,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == ""
 " coc
 " ==============================
 let g:coc_global_extensions = [
+ \ 'coc-vimlsp',
  \ 'coc-java',
  \ 'coc-json',
  \ 'coc-yaml',
- \ 'coc-vimlsp',
  \ 'coc-template',
  \ 'coc-todolist',
  \ 'coc-pairs',
