@@ -78,7 +78,9 @@ inoremap <silent> <C-s> <ESC>:w<CR>a
 
 " buffer
 nnoremap <silent> <LEADER>b[ :bprevious<CR>
+nnoremap <silent> <M-h> :bprevious<CR>
 nnoremap <silent> <LEADER>b] :bnext<CR>
+nnoremap <silent> <M-l> :bnext<CR>
 nnoremap <silent> <LEADER>bd :bdelete<CR>
 nnoremap <silent> <LEADER>bb :buffers<CR>
 
@@ -106,10 +108,10 @@ nnoremap <silent> <Down> <nop>
 nnoremap <silent> <Left> <nop>
 nnoremap <silent> <Right> <nop>
 
-inoremap <silent> <Up> <nop>
-inoremap <silent> <Down> <nop>
-inoremap <silent> <Left> <nop>
-inoremap <silent> <Right> <nop>
+"inoremap <silent> <Up> <nop>
+"inoremap <silent> <Down> <nop>
+"inoremap <silent> <Left> <nop>
+"inoremap <silent> <Right> <nop>
 
 if system('uname -r') =~ 'Microsoft'
     augroup Yank
@@ -127,6 +129,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
+"Plug 'junegunn/seoul256.vim'
+"Plug 'doums/darcula'
+"Plug 'hardcoreplayers/gruvbox9'
 Plug 'mhinz/vim-startify'
 
 "DIR
@@ -168,11 +173,13 @@ let laststatus = 2
 " let g:airline_solarized_bg='dark'
 
 " ==============================
-" gruvbox
+" theme
 " ==============================
 set background=dark
-" let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
+"let g:seoul256_background = 233
+"colorscheme seoul256
 
 " ==============================
 " nerdtree
@@ -251,7 +258,7 @@ nmap <silent> <leader>jr <Plug>(coc-references)
 nmap <silent> <leader>cf <Plug>(coc-format) 
 nmap <silent> <M-i> <Plug>(coc-codeaction)
 nmap <silent> <leader>cl <Plug>(coc-codelens-action)
-nmap <silent> <M-cr> <Plug>(coc-fix-current)
+nmap <silent> <M-CR> <Plug>(coc-fix-current)
 nmap <silent> <leader>ct <Plug>(coc-template-top)
 "nmap <c-]> <Plug>(coc-definition)
 "nmap <c-[> <c-o>
@@ -262,6 +269,7 @@ let g:snips_author = 'Liyang'
 "autocmd BufNewFile .gitignore CocCommand template.templateTop
 "autocmd BufNewFile .java CocCommand template.templateTop
 "autocmd BufNewFile .go CocCommand template.templateTop
+"autocmd BufNewFile .html CocCommand template.templateTop
 
 " todolist
 nmap <silent> <leader>tc :CocCommand todolist.create<CR>
