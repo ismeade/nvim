@@ -130,8 +130,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 "Plug 'junegunn/seoul256.vim'
-"Plug 'doums/darcula'
-"Plug 'hardcoreplayers/gruvbox9'
 Plug 'mhinz/vim-startify'
 
 "DIR
@@ -340,7 +338,7 @@ nmap <silent> <LEADER>sa :Lines<CR>
 
 
 " ==============================
-" lzaygit
+" lazygit
 " ==============================
 
 " setup mapping to call :LazyGit
