@@ -209,8 +209,6 @@ let g:coc_global_extensions = [
  \ 'coc-java',
  \ 'coc-json',
  \ 'coc-yaml',
- \ 'coc-template',
- \ 'coc-todolist',
  \ 'coc-pairs',
  \ 'coc-snippets']
 
@@ -292,6 +290,7 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
 
 autocmd FileType go nmap <leader>gb  <Plug>(go-build)
+autocmd FileType go nmap <leader>gl  <Plug>(go-lint)
 autocmd FileType go nmap <leader>gr  <Plug>(go-run)
 autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 
