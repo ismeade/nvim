@@ -207,6 +207,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") && v:this_session == ""
 let g:coc_global_extensions = [
  \ 'coc-vimlsp',
  \ 'coc-java',
+ \ 'coc-html',
+ \ 'coc-htmlhint',
+ \ 'coc-vetur',
+ \ 'coc-eslint',
  \ 'coc-json',
  \ 'coc-yaml',
  \ 'coc-pairs',

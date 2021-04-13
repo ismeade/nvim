@@ -1,5 +1,5 @@
 {
-    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.extensionUpdateCheck": "never",
     "suggest.noselect": false,
     "suggest.enablePreselect": true,
     "suggest.completionItemKindLabels": {
