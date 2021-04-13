@@ -138,6 +138,7 @@ Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-rooter'
 
 "EDIT
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
