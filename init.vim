@@ -46,7 +46,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set clipboard+=unnamedplus
 
-set list lcs=tab:\.\ 
+"set list lcs=tab:\.\ 
 filetype on
 filetype indent on
 filetype plugin on
@@ -221,8 +221,8 @@ let g:coc_global_extensions = [
       "\ coc#refresh()
 "inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-inoremap <silent><expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <silent><expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+"inoremap <silent><expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+"inoremap <silent><expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 "inoremap <silent><expr> <TAB>
       "\ pumvisible() ? coc#_select_confirm() :
