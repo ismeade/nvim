@@ -146,7 +146,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/vim-cursorword'
 Plug 'lfv89/vim-interestingwords'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine' "缩进对齐线
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'gcmt/wildfire.vim'
 
@@ -311,6 +311,7 @@ nnoremap <leader>ga :cclose<CR>
 " ==============================
 " indentLine
 " ==============================
+" autocmd FileType json,markdown let g:indentLine_conceallevel = 0
 
 " ==============================
 " markdown-preview
