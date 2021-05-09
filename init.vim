@@ -52,7 +52,7 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 
-let g:loaded_python_provider = 0
+"let g:loaded_python_provider = 0
 
 " ==============================
 " keymap
@@ -119,6 +119,8 @@ if system('uname -r') =~ 'Microsoft'
         autocmd TextYankPost * :call system('clip.exe ',@w)
     augroup END
 endif
+
+let g:python3_host_prog = '/usr/bin/python3'
 
 " ==============================
 " plug
@@ -213,6 +215,7 @@ let g:coc_global_extensions = [
  \ 'coc-json',
  \ 'coc-yaml',
  \ 'coc-pairs',
+ \ 'coc-translator',
  \ 'coc-snippets']
 
 "inoremap <silent><expr> <TAB>
@@ -263,6 +266,10 @@ nmap <silent> <M-CR> <Plug>(coc-fix-current)
 nmap <silent> <leader>ct <Plug>(coc-template-top)
 "nmap <c-]> <Plug>(coc-definition)
 "nmap <c-[> <c-o>
+"coc-translator
+" popup
+nmap <Leader>t <Plug>(coc-translator-p)
+vmap <Leader>t <Plug>(coc-translator-pv)
 
 
 let g:snips_author = 'Liyang'
