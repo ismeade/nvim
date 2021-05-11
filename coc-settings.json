@@ -70,5 +70,8 @@
             "path": "/usr/lib/jvm/java-11-openjdk-amd64"
         }
     ],
-    "eslint.autoFixOnSave": true
+    "eslint.autoFixOnSave": true,
+    "translator.engines": [
+        "youdao"
+    ]
 }

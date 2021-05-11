@@ -266,10 +266,11 @@ nmap <silent> <M-CR> <Plug>(coc-fix-current)
 nmap <silent> <leader>ct <Plug>(coc-template-top)
 "nmap <c-]> <Plug>(coc-definition)
 "nmap <c-[> <c-o>
+
 "coc-translator
 " popup
-nmap <Leader>t <Plug>(coc-translator-p)
-vmap <Leader>t <Plug>(coc-translator-pv)
+nmap <Leader>jt <Plug>(coc-translator-p)
+vmap <Leader>jt <Plug>(coc-translator-pv)
 
 
 let g:snips_author = 'Liyang'
