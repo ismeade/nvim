@@ -30,7 +30,7 @@
         "variable": "\ue71b"
     },
     "snippets.ultisnips.directories": [
-        "$HOME/.config/nvim/Ultisnips/"
+        "$HOME/.config/nvim/ultisnips/"
     ],
     "diagnostic.errorSign": "\uf467",
     "diagnostic.warningSign": "\uf071",
