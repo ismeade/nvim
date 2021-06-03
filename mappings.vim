@@ -4,34 +4,10 @@
 
 " leader
 let g:mapleader="\<Space>"
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-set timeoutlen=500
-call which_key#register('<Space>', "g:which_key_map")
-
-
-let g:which_key_map =  {}
-let g:which_key_map.f = { 'name' : '+file' }
-
-
-"let g:which_key_map.e = { 'env' : '+source' }
-"let g:which_key_map.e.e = 'init.vim'
-
-
-"let g:which_key_map.e = {
-      "\ 'name' : '+config' ,
-      "\ 'e' : 'open-vimrc' ,
-      "\ 'r' : 'source-vimrc',
-      "\ }
-
-let g:which_key_map['e'] = {
-      \'name' : '+config' ,
-      \'e' : [':e $MYVIMRC', 'open-vimrc']          ,
-      \'r' : [':source $MYVIMRC', 'source-vimrc']         ,
-      \}
 
 " source 
-"nnoremap <LEADER>er :source $MYVIMRC<CR>
-"nnoremap <LEADER>ee :e $MYVIMRC<CR>
+nnoremap <LEADER>er :source $MYVIMRC<CR>
+nnoremap <LEADER>ee :e $MYVIMRC<CR>
 
 " quit
 nnoremap <silent> <LEADER>qq :q<CR>
