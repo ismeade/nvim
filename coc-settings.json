@@ -58,16 +58,16 @@
             ]
         }
     },
-    "java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
+    "java.home": "/usr/lib/jvm/java-11-openjdk",
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
-            "path": "/usr/lib/jvm/jdk1.8.0_261",
+            "path": "/usr/lib/jvm/java-8-openjdk",
             "default": true
         },
         {
             "name": "JavaSE-11",
-            "path": "/usr/lib/jvm/java-11-openjdk-amd64"
+            "path": "/usr/lib/jvm/java-11-openjdk"
         }
     ],
     "eslint.autoFixOnSave": true,

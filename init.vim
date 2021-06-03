@@ -116,7 +116,7 @@ nnoremap <silent> <Right> <nop>
 if system('uname -r') =~ 'Microsoft'
     augroup Yank
         autocmd!
-        autocmd TextYankPost * :call system('clip.exe ',@w)
+        autocmd TextYankPost * :call system('/mnt/c/Windows/System32/clip.exe ',@w)
     augroup END
 endif
 
@@ -153,7 +153,7 @@ Plug 'gcmt/wildfire.vim'
 "GO
 Plug 'fatih/vim-go'
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
