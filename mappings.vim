@@ -42,6 +42,8 @@ nnoremap <silent> <LEADER><TAB>d :tabclose<CR>
 
 " plug
 nnoremap <LEADER>pi :PlugInstall<CR>
+nnoremap <LEADER>pu :PlugUpdate<CR>
+nnoremap <LEADER>pc :PlugClean<CR>
 
 " editer
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
