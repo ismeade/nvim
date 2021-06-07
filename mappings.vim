@@ -46,7 +46,7 @@ nnoremap <LEADER>pu :PlugUpdate<CR>
 nnoremap <LEADER>pc :PlugClean<CR>
 
 " editer
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+"nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 " disable <Up><Down><Left><Right>
 nnoremap <silent> <Up> <nop>
