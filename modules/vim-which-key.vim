@@ -69,7 +69,7 @@ let g:which_key_map.TAB = {
     \ 'name' : '+tab' ,
     \ 'n' : 'new tab' ,
     \ 'tab' : 'new tab' ,
-    \ 'd' : 'close ' ,
+    \ 'd' : 'close' ,
     \}
 
 " plug

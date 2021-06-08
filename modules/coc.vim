@@ -77,8 +77,8 @@ let g:snips_author = 'Liyang'
 "autocmd BufNewFile .html CocCommand template.templateTop
 
 " todolist
-nmap <silent> <leader>tc :CocCommand todolist.create<CR>
-nmap <silent> <leader>tl :CocList todolist<CR>
+"nmap <silent> <leader>tc :CocCommand todolist.create<CR>
+"nmap <silent> <leader>tl :CocList todolist<CR>
 
 "autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 " ==============================
