@@ -9,3 +9,8 @@ git clone -b wsl2-manjaro git@github.com:ismeade/nvim.git ~/.config/nvim
 
 
 ```
+
+Tagbar依赖ctags
+```sh
+sudo pacman -S ctags
+```

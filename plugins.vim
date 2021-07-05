@@ -27,6 +27,8 @@ Plug 'lfv89/vim-interestingwords'
 "Plug 'Yggdroot/indentLine' "缩进对齐线
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'gcmt/wildfire.vim'
+Plug 'preservim/tagbar'
+"Plug 'liuchengxu/vista.vim'
 
 "GO
 Plug 'fatih/vim-go'
