@@ -27,6 +27,7 @@ nnoremap <silent> <LEADER>b] :bnext<CR>
 nnoremap <silent> <M-l> :bnext<CR>
 nnoremap <silent> <LEADER>bd :bdelete<CR>
 nnoremap <silent> <LEADER>bb :buffers<CR>
+nnoremap <silent> <LEADER>bc :BufOnly<CR>
 
 " window
 nnoremap <silent> <LEADER>wv :vsp<CR>
