@@ -17,3 +17,6 @@
     "\ 'content_editable': v:false,
     "\ 'disable_filename': 1
     "\ }
+
+" use a custom port to start server or random for empty
+let g:mkdp_port = '9999'

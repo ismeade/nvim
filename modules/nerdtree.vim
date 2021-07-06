@@ -2,6 +2,7 @@
 " nerdtree
 " ==============================
 nmap <silent> <LEADER>tt :NERDTreeToggle<CR>
+nmap <silent> <LEADER>tr :NERDTreeCWD<CR>
 let g:NERDTreeMapActivateNode = '<tab>'
 
 let g:NERDTreeDirArrowExpandable = '+'
