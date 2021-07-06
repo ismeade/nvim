@@ -1,7 +1,8 @@
 " ==============================
 " fzf
 " ==============================
-nmap <silent> <LEADER>sf :Files<CR>
+nmap <silent> <LEADER>sf. :Files<CR>
+nmap <silent> <LEADER>sf/ :Files /<CR>
 nmap <silent> <LEADER>sg :GFiles<CR>
 nmap <silent> <LEADER>sb :Buffers<CR>
 nmap <silent> <LEADER>sr :History<CR>

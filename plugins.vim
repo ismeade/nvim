@@ -6,8 +6,8 @@ call plug#begin('~/.config/nvim/plugged')
 "UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
-"Plug 'junegunn/seoul256.vim'
+"Plug 'morhetz/gruvbox'
+Plug 'junegunn/seoul256.vim'
 Plug 'mhinz/vim-startify'
 
 Plug 'liuchengxu/vim-which-key'
@@ -17,6 +17,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-rooter'
+
+"BUFFER
+Plug 'vim-scripts/BufOnly.vim'
 
 "EDIT
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
