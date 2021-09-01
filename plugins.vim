@@ -7,15 +7,13 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-"Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'mhinz/vim-startify'
-
-Plug 'liuchengxu/vim-which-key'
 
 "DIR
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons' "图标，需要nerdfont
 Plug 'airblade/vim-rooter'
 
 "EDIT
@@ -33,7 +31,7 @@ Plug 'preservim/tagbar'
 "GO
 Plug 'fatih/vim-go'
 
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

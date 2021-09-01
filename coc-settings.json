@@ -32,8 +32,6 @@
     "snippets.ultisnips.directories": [
         "$HOME/.config/nvim/ultisnips/"
     ],
-    "diagnostic.errorSign": "\uf467",
-    "diagnostic.warningSign": "\uf071",
     "diagnostic.infoSign": "\uf129",
     "diagnostic.hintSign": "\uf864",
     "diagnostic.displayByAle": false,
@@ -58,18 +56,19 @@
             ]
         }
     },
-    "java.home": "/usr/lib/jvm/java-11-openjdk",
+    "java.home": "/Users/liyang/java/zulu16.32.15-ca-jdk16.0.2",
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
-            "path": "/usr/lib/jvm/java-8-openjdk",
+            "path": "/Users/liyang/java/zulu8.56.0.23-ca-jdk8.0.302",
             "default": true
         },
         {
-            "name": "JavaSE-11",
-            "path": "/usr/lib/jvm/java-11-openjdk"
+            "name": "JavaSE-1.6",
+            "path": "/Users/liyang/java/zulu16.32.15-ca-jdk16.0.2"
         }
     ],
+    "java.jdt.ls.vmargs": "-javaagent:/Users/liyang/java/lombok.jar",
     "eslint.autoFixOnSave": true,
     "translator.engines": [
         "youdao"
