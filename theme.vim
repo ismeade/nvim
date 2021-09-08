@@ -3,7 +3,11 @@
 " ==============================
 set background=dark
 "let g:gruvbox_contrast_dark = 'hard'
-"colorscheme gruvbox
-let g:seoul256_background = 233
-colorscheme seoul256
+"let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark='medium'
+colorscheme gruvbox
 
+"colorscheme dracula
+
+"let g:seoul256_background = 233
+"colorscheme seoul256
