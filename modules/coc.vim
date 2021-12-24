@@ -11,6 +11,7 @@ let g:coc_global_extensions = [
  \ 'coc-json',
  \ 'coc-yaml',
  \ 'coc-pairs',
+ \ 'coc-prettier',
  \ 'coc-translator',
  \ 'coc-snippets']
 
@@ -65,8 +66,10 @@ nmap <silent> <leader>ct <Plug>(coc-template-top)
 
 "coc-translator
 " popup
-nmap <Leader>jt <Plug>(coc-translator-p)
-vmap <Leader>jt <Plug>(coc-translator-pv)
+nmap <Leader>fy <Plug>(coc-translator-p)
+vmap <Leader>fy <Plug>(coc-translator-pv)
+"coc-prettier
+nmap <leader>ff  :CocCommand prettier.formatFile<CR>
 
 
 let g:snips_author = 'Liyang'

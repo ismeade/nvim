@@ -21,7 +21,7 @@ Plug 'airblade/vim-rooter'
 
 "EDIT
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/vim-cursorword'
 Plug 'tpope/vim-surround'
@@ -30,7 +30,7 @@ Plug 'lfv89/vim-interestingwords'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'airblade/vim-gitgutter'
 Plug 'gcmt/wildfire.vim'
-Plug 'preservim/tagbar'
+"Plug 'preservim/tagbar'
 "Plug 'liuchengxu/vista.vim'
 
 "GO
