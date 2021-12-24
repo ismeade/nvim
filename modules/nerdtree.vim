@@ -7,7 +7,7 @@ let g:NERDTreeMapActivateNode = '<tab>'
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
-let NERDTreeWinSize=40
+let NERDTreeWinSize=35
 
 " 没有指定文件时，自动打开，启动页会无效
 "autocmd StdinReadPre * let s:std_in=1
