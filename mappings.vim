@@ -59,10 +59,3 @@ nnoremap <silent> <Right> <nop>
 "inoremap <silent> <Left> <nop>
 "inoremap <silent> <Right> <nop>
 
-if system('uname -r') =~ 'Microsoft'
-    augroup Yank
-        autocmd!
-        autocmd TextYankPost * :call system('/mnt/c/Windows/System32/clip.exe ',@w)
-    augroup END
-endif
-

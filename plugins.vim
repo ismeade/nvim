@@ -30,10 +30,12 @@ Plug 'lfv89/vim-interestingwords'
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 Plug 'airblade/vim-gitgutter'
 Plug 'gcmt/wildfire.vim'
-"Plug 'preservim/tagbar'
+Plug 'preservim/tagbar'
 "Plug 'liuchengxu/vista.vim'
+"Plug 'ybian/smartim' "自动切换输入法
 
-"GO
+
+"golang
 Plug 'fatih/vim-go'
 "markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }

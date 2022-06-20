@@ -1,9 +1,9 @@
 " =============================
 " base set
 " ==============================
-set number
-set relativenumber
-set cursorline
+set number " 行号
+set relativenumber " 相对行号
+set cursorline " 当前行高亮
 set wrap
 set showcmd
 set wildmenu
@@ -20,8 +20,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-set encoding=utf-8
-
+" 锁进
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4

@@ -4,6 +4,7 @@
 let g:coc_global_extensions = [
  \ 'coc-vimlsp',
  \ 'coc-java',
+ \ 'coc-sql',
  \ 'coc-html',
  \ 'coc-htmlhint',
  \ 'coc-vetur',
