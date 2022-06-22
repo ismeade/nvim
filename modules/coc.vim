@@ -4,6 +4,7 @@
 let g:coc_global_extensions = [
  \ 'coc-vimlsp',
  \ 'coc-java',
+ \ 'coc-go',
  \ 'coc-sql',
  \ 'coc-html',
  \ 'coc-htmlhint',
@@ -58,6 +59,7 @@ nmap <silent> <leader>jy <Plug>(coc-type-definition)
 nmap <silent> <leader>ji <Plug>(coc-implementation)
 nmap <silent> <leader>jr <Plug>(coc-references)
 nmap <silent> <leader>cf <Plug>(coc-format) 
+nmap <silent> <leader>ca <Plug>(coc-codeaction) 
 nmap <silent> <M-i> <Plug>(coc-codeaction)
 nmap <silent> <leader>cl <Plug>(coc-codelens-action)
 nmap <silent> <M-CR> <Plug>(coc-fix-current)
@@ -89,22 +91,28 @@ let g:snips_author = 'Liyang'
 " vim-go
 " ==============================
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 
-let g:go_fmt_command = "goimports"
-let g:go_autodetect_gopath = 1
-let g:go_list_type = "quickfix"
+"let g:go_fmt_command = "goimports"
+"let g:go_autodetect_gopath = 1
+"let g:go_list_type = "quickfix"
 
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_generate_tags = 1
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_function_calls = 1
+"let g:go_highlight_extra_types = 1
+"let g:go_highlight_generate_tags = 1
 
-autocmd FileType go nmap <leader>gb  <Plug>(go-build)
-autocmd FileType go nmap <leader>gl  <Plug>(go-lint)
-autocmd FileType go nmap <leader>gr  <Plug>(go-run)
-autocmd FileType go nmap <leader>gt  <Plug>(go-test)
+"autocmd FileType go nmap <leader>gb  <Plug>(go-build)
+"autocmd FileType go nmap <leader>gl  <Plug>(go-lint)
+"autocmd FileType go nmap <leader>gr  <Plug>(go-run)
+"autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>ga :cclose<CR>
+
+" ==============================
+" coc-go
+" ==============================
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+"autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.formatDocument')
