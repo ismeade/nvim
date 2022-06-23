@@ -10,6 +10,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 "vim-airline 的主题插件
 Plug 'vim-airline/vim-airline-themes'
+"起始页
+Plug 'mhinz/vim-startify'
 
 " ==============================
 " 主题
@@ -18,7 +20,6 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'dracula/vim'
 
-Plug 'mhinz/vim-startify'
 
 " ==============================
 " 导航栏
