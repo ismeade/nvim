@@ -1,7 +1,7 @@
 " ==============================
 " markdown-preview
 " ==============================
-let g:mkdp_browser = 'edge'
+"let g:mkdp_browser = 'edge'
 let g:mkdp_page_title = '${name}'
 
 let g:mkdp_preview_options = {

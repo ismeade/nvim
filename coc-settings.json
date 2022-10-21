@@ -22,16 +22,12 @@
   "go.goplsOptions": {
     "completeUnimported": true
   },
-  "java.home": "/Users/liyang/java/zulu16.32.15-ca-jdk16.0.2",
+  "java.home": "/Users/liyang/.sdkman/candidates/java/17.0.5-zulu",
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-1.8",
       "path": "/Users/liyang/java/zulu8.56.0.23-ca-jdk8.0.302",
       "default": true
-    },
-    {
-      "name": "JavaSE-1.6",
-      "path": "/Users/liyang/java/zulu16.32.15-ca-jdk16.0.2"
     }
   ],
   "java.jdt.ls.vmargs": "-javaagent:/Users/liyang/java/lombok.jar",
