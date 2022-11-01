@@ -1,7 +1,7 @@
 {
   "coc.preferences.extensionUpdateCheck": "never",
-  "suggest.noselect": true,
-  "suggest.enablePreselect": false,
+  "suggest.noselect": false,
+  "suggest.enablePreselect": true,
   "snippets.ultisnips.directories": ["$HOME/.config/nvim/ultisnips/"],
   "diagnostic.infoSign": "\uf129",
   "diagnostic.hintSign": "\uf864",
@@ -10,7 +10,8 @@
   "diagnostic.checkCurrentLine": true,
   "diagnostic.virtualTextPrefix": " ❯❯❯ ",
   "diagnostic.virtualText": true,
-  "coc.preferences.formatOnSaveFiletypes": ["json", "yaml", "go"],
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnType": true,
   "codeLens.enable": true,
   "languageserver": {
     "golang": {
@@ -22,19 +23,19 @@
   "go.goplsOptions": {
     "completeUnimported": true
   },
-  "java.home": "/Users/liyang/java/zulu16.32.15-ca-jdk16.0.2",
+  "java.home": "/home/liyang/.sdkman/candidates/java/11.0.12-open",
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-1.8",
-      "path": "/Users/liyang/java/zulu8.56.0.23-ca-jdk8.0.302",
+      "path": "/home/liyang/.sdkman/candidates/java/8.0.302-open",
       "default": true
     },
     {
       "name": "JavaSE-1.6",
-      "path": "/Users/liyang/java/zulu16.32.15-ca-jdk16.0.2"
+      "path": "/home/liyang/.sdkman/candidates/java/11.0.12-open"
     }
   ],
-  "java.jdt.ls.vmargs": "-javaagent:/Users/liyang/java/lombok.jar",
+  "java.jdt.ls.vmargs": "-javaagent:/home/liyang/.config/coc/extensions/coc-java-data/server/plugins/lombok.jar",
   "eslint.autoFixOnSave": true,
   "translator.engines": ["youdao"]
 }
