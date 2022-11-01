@@ -61,9 +61,9 @@ nmap <silent> <leader>jr <Plug>(coc-references)
 nmap <silent> <leader>cf <Plug>(coc-format) 
 nmap <silent> <leader>ca <Plug>(coc-codeaction) 
 nmap <silent> <M-i> <Plug>(coc-codeaction)
-nmap <silent> <leader>cl <Plug>(coc-codelens-action)
+nmap <silent> <leader>jl <Plug>(coc-codelens-action)
 nmap <silent> <M-CR> <Plug>(coc-fix-current)
-nmap <silent> <leader>ct <Plug>(coc-template-top)
+nmap <silent> <leader>jt <Plug>(coc-template-top)
 "nmap <c-]> <Plug>(coc-definition)
 "nmap <c-[> <c-o>
 
