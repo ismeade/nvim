@@ -5,7 +5,10 @@ let g:coc_global_extensions = [
  \ 'coc-vimlsp',
  \ 'coc-java',
  \ 'coc-go',
+ \ 'coc-rls',
+ \ 'coc-rust-analyzer',
  \ 'coc-sql',
+ \ 'coc-protobuf',
  \ 'coc-html',
  \ 'coc-htmlhint',
  \ 'coc-vetur',
@@ -60,9 +63,11 @@ nmap <silent> <leader>ji <Plug>(coc-implementation)
 nmap <silent> <leader>jr <Plug>(coc-references)
 nmap <silent> <leader>cf <Plug>(coc-format) 
 nmap <silent> <leader>ca <Plug>(coc-codeaction) 
-nmap <silent> <M-i> <Plug>(coc-codeaction)
-nmap <silent> <leader>jl <Plug>(coc-codelens-action)
-nmap <silent> <M-CR> <Plug>(coc-fix-current)
+nmap <silent> <M-.> <Plug>(coc-codeaction)
+nmap <silent> <leader>cl <Plug>(coc-codeaction)
+"nmap <silent> <leader>jl <Plug>(coc-codelens-action)
+nmap <silent> <leader>ck <Plug>(coc-fix-current)
+"nmap <silent> <M-CR> <Plug>(coc-fix-current)
 nmap <silent> <leader>jt <Plug>(coc-template-top)
 "nmap <c-]> <Plug>(coc-definition)
 "nmap <c-[> <c-o>
@@ -116,3 +121,4 @@ nnoremap <leader>ga :cclose<CR>
 " ==============================
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 "autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.formatDocument')
+nmap <leader>gt  :CocCommand go.tags.add.prompt<CR>
