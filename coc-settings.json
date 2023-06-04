@@ -1,6 +1,6 @@
 {
   "coc.preferences.extensionUpdateCheck": "never",
-  "suggest.noselect": false,
+  "suggest.noselect": true,
   "suggest.enablePreselect": false,
   "snippets.ultisnips.directories": ["$HOME/.config/nvim/ultisnips/"],
   "diagnostic.infoSign": "\uf129",
@@ -22,7 +22,7 @@
   "go.goplsOptions": {
     "completeUnimported": true
   },
-  "java.home": "/Users/liyang/.sdkman/candidates/java/17.0.5-zulu",
+  "java.jdt.ls.java.home": "/Users/liyang/.sdkman/candidates/java/17.0.5-zulu",
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-1.8",
@@ -32,5 +32,6 @@
   ],
   "java.jdt.ls.vmargs": "-javaagent:/Users/liyang/java/lombok.jar",
   "eslint.autoFixOnSave": true,
-  "translator.engines": ["youdao"]
+  "translator.engines": ["youdao"],
+  "snippets.ultisnips.pythonPrompt": false
 }

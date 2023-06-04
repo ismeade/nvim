@@ -5,7 +5,6 @@ let g:coc_global_extensions = [
  \ 'coc-vimlsp',
  \ 'coc-java',
  \ 'coc-go',
- \ 'coc-rls',
  \ 'coc-rust-analyzer',
  \ 'coc-sql',
  \ 'coc-protobuf',
@@ -47,7 +46,8 @@ endfunction
 
 "inoremap <silent><expr> <c-i> coc#refresh()
 
-let g:coc_snippet_next = '<tab>'
+"let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_next = '<C-j>'
 let g:coc_snippet_prev = '<s-tab>'
 
 if exists('*complete_info')
