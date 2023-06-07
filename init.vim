@@ -7,3 +7,4 @@ for file in split(globpath('~/.config/nvim/modules', '*.vim'), '\n')
     exe 'source' file
 endfor
 
+let g:loaded_perl_provider = 0

@@ -17,6 +17,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'dracula/vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jpo/vim-railscasts-theme'
 
 Plug 'mhinz/vim-startify'
 
