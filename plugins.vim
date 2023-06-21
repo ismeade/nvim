@@ -29,7 +29,7 @@ Plug 'scrooloose/nerdtree'
 "可以在文件目录中看到 Git 版本信息
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "在 NERDTree 中显示文件类型图标 需要nerdfont
-"Plug 'ryanoasis/vim-devicons' 
+Plug 'ryanoasis/vim-devicons' 
 Plug 'airblade/vim-rooter'
 
 " ==============================
