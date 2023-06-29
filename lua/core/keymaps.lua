@@ -17,3 +17,16 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- 开启nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+-- 窗口
+keymap.set("n", "<leader>ww", "<C-w>w")
+
+-- quit
+keymap.set("n", "<leader>qq", ":q<CR>")
+keymap.set("n", "<leader>qa", ":qa<CR>")
+keymap.set("n", "<leader>qw", ":wq<CR>")
+keymap.set("n", "<leader>Q", ":q!<CR>")
+keymap.set("n", "<leader>Qw", ":qw!<CR>")
+
+keymap.set("n", "<leader>fs", ":w<CR>")
+

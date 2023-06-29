@@ -1,9 +1,8 @@
-require("user.options")
-require("user.keymaps")
-require("user.plugins")
+require("core.options")
+require("core.keymaps")
+require("core.plugins")
 
 require("plugins.lualine")
-
 require("plugins.nvim-tree")
 require("plugins.nvim-treesitter")
 require("plugins.lsp")
