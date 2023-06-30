@@ -10,4 +10,5 @@ require("plugins.cmp")
 require("plugins.telescope")
 require("plugins.autopairs")
 require("plugins.gitsigns")
-
+require("plugins.comment")
+require("plugins.toggleterm")

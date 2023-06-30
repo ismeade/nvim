@@ -11,12 +11,12 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-vim.cmd([[
-    augroup packer_user_config
-        autocmd!
-        autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup end
-]])
+-- vim.cmd([[
+--     augroup packer_user_config
+--         autocmd!
+--         autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--     augroup end
+-- ]])
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
@@ -55,6 +55,21 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    --[[
+    use {
+        'goolord/alpha-nvim',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
+    }
+    --]]
+    use {
+        'akinsho/toggleterm.nvim', tag = '*'
+    }
+    use 'numToStr/Comment.nvim'
     -- My plugins here
     -- use 'foo1/bar1.nvim'
     -- use 'foo2/bar2.nvim'
