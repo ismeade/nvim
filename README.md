@@ -1,11 +1,3 @@
 ### 安装
 
-安装nodejs npm python3 pip3 python2 pip2 
-```sh
-
-```
-
-Tagbar依赖ctags
-```sh
-
-```
+更新lua中

@@ -35,6 +35,11 @@ keymap.set("n", "<leader>wq", "<C-w>q")
 keymap.set("n", "<leader>wl", "<C-w>l")
 keymap.set("n", "<leader>wh", "<C-w>h")
 
+-- buffer
+keymap.set("n", "<leader>b[", ":bprevious<CR>")
+keymap.set("n", "<leader>b]", ":bnext<CR>")
+keymap.set("n", "<leader>bd", ":bdelete<CR>")
+
 -- tab
 keymap.set("n", "<leader><tab>n", ":tabe<CR>")
 keymap.set("n", "<leader><tab><tab>", ":tabnext<CR>")

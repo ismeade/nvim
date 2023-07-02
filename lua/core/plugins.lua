@@ -19,19 +19,25 @@ local packer_bootstrap = ensure_packer()
 -- ]])
 
 return require('packer').startup(function(use)
+    -- 插件管理
     use 'wbthomason/packer.nvim'
+    -- 主题
     use 'ellisonleao/gruvbox.nvim'
+    -- 状态栏
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    -- 文件树
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
+    -- 代码高亮
     use 'nvim-treesitter/nvim-treesitter'
+    -- lsp管理
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
@@ -47,32 +53,28 @@ return require('packer').startup(function(use)
     use "hrsh7th/cmp-path" -- 文件路径
 
     use "windwp/nvim-autopairs" -- 自动补全括号
-
-    use "akinsho/bufferline.nvim" -- buffer分割线
-    use "lewis6991/gitsigns.nvim" -- 左则git提示
+    -- buffer分割线
+    use "akinsho/bufferline.nvim"
+    -- 左则git提示
+    use "lewis6991/gitsigns.nvim"
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    --[[
-    use {
-        'goolord/alpha-nvim',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-        },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
-        end
-    }
-    --]]
+    -- use {
+    --     'goolord/alpha-nvim',
+    --     requires = {
+    --         'nvim-tree/nvim-web-devicons', -- optional
+    --     },
+    --     config = function ()
+    --         require'alpha'.setup(require'alpha.themes.startify'.config)
+    --     end
+    -- }
     use {
         'akinsho/toggleterm.nvim', tag = '*'
     }
     use 'numToStr/Comment.nvim'
-    -- My plugins here
-    -- use 'foo1/bar1.nvim'
-    -- use 'foo2/bar2.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
