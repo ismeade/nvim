@@ -4,6 +4,10 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup()
 
+-- nvim-tree
+keymaps.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+
 --[[
 o 打开关闭文件夹
 a 创建文件
