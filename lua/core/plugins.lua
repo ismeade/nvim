@@ -20,9 +20,9 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     -- 插件管理
-    use 'wbthomason/packer.nvim'
+    use {'wbthomason/packer.nvim'}
     -- 主题
-    use 'ellisonleao/gruvbox.nvim'
+    use {'ellisonleao/gruvbox.nvim'}
     -- 状态栏
     use {
         'nvim-lualine/lualine.nvim',
@@ -36,27 +36,27 @@ return require('packer').startup(function(use)
         },
     }
     -- 代码高亮
-    use 'nvim-treesitter/nvim-treesitter'
+    use {'nvim-treesitter/nvim-treesitter'}
     -- lsp管理
     use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
-        "neovim/nvim-lspconfig"
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',  -- 这个相当于mason.nvim和lspconfig的桥梁
+        'neovim/nvim-lspconfig'
     }
 
     -- 自动补全
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-nvim-lsp"
-    use "L3MON4D3/LuaSnip" -- snippets引擎，不装这个自动补全会出问题
-    use "saadparwaiz1/cmp_luasnip"
-    use "rafamadriz/friendly-snippets"
-    use "hrsh7th/cmp-path" -- 文件路径
+    use {'hrsh7th/nvim-cmp'}
+    use {'hrsh7th/cmp-nvim-lsp'}
+    use {'hrsh7th/cmp-path'} -- 文件路径
+    use {'L3MON4D3/LuaSnip'} -- snippets引擎，不装这个自动补全会出问题
+    use {'saadparwaiz1/cmp_luasnip'}
+    use {'rafamadriz/friendly-snippets'}
 
-    use "windwp/nvim-autopairs" -- 自动补全括号
+    use {"windwp/nvim-autopairs"} -- 自动补全括号
     -- buffer分割线
-    use "akinsho/bufferline.nvim"
+    use {"akinsho/bufferline.nvim"}
     -- 左则git提示
-    use "lewis6991/gitsigns.nvim"
+    use {"lewis6991/gitsigns.nvim"}
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
@@ -74,7 +74,7 @@ return require('packer').startup(function(use)
     use {
         'akinsho/toggleterm.nvim', tag = '*'
     }
-    use 'numToStr/Comment.nvim'
+    use {'numToStr/Comment.nvim'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
