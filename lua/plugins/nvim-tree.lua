@@ -5,7 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup()
 
 -- nvim-tree
-keymaps.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymaps.set("n", "<leader>tt", ":NvimTreeToggle<CR>")
 
 
 --[[

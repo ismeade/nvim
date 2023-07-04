@@ -6,7 +6,7 @@ local ensure_packer = function()
         vim.cmd [[packadd packer.nvim]]
         return true
     end
-    return false
+   return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -17,6 +17,11 @@ local packer_bootstrap = ensure_packer()
 --         autocmd BufWritePost plugins.lua source <afile> | PackerSync
 --     augroup end
 -- ]])
+
+
+-- par
+keymaps.set("n", "<leader>ps", ":PackerSync<CR>")
+keymaps.set("n", "<leader>pc", ":PackerClean<CR>")
 
 return require('packer').startup(function(use)
     -- 插件管理
@@ -62,15 +67,6 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',  -- 文件检索
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    -- use {
-    --     'goolord/alpha-nvim',
-    --     requires = {
-    --         'nvim-tree/nvim-web-devicons', -- optional
-    --     },
-    --     config = function ()
-    --         require'alpha'.setup(require'alpha.themes.startify'.config)
-    --     end
-    -- }
     use {
         'akinsho/toggleterm.nvim', tag = '*'
     }

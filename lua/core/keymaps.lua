@@ -25,8 +25,6 @@ keymaps.set("n", "<leader>ek", ":e ~/.config/nvim/lua/core/keymaps.lua<CR>")
 keymaps.set("n", "<leader>ep", ":e ~/.config/nvim/lua/core/plugins.lua<CR>")
 keymaps.set("n", "<leader>er", ":source $MYVIMRC<CR>")
 
-keymaps.set("n", "<leader>pi", ":PackerSync<CR>")
-
 -- window
 keymaps.set("n", "<leader>wv", "<C-w>v")
 keymaps.set("n", "<leader>wh", "<C-w>s")
