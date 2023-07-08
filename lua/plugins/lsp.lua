@@ -22,7 +22,18 @@ require("lspconfig").lua_ls.setup {
     capabilities = capabilities,
 }
 
-require("lspconfig").gopls.setup {}
+require("lspconfig").gopls.setup {
+    settings = {
+            ui = {
+            gopls = {
+                completion = {
+                    usePlaceholders = true,
+                },
+                gofumpt = true,
+            },
+        }
+    }
+}
 
 keymaps.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 keymaps.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
