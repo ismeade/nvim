@@ -7,3 +7,4 @@ autoload/
 tmp/
 .netrwhist
 plugin/
+lazy-lock.json

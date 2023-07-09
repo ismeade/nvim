@@ -2,8 +2,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("nvim-tree").setup()
-
 -- nvim-tree
 keymaps.set("n", "<leader>tt", ":NvimTreeToggle<CR>")
 
@@ -17,3 +15,13 @@ c 拷贝
 p 粘贴
 d 删除
 --]]
+--
+return {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {
+        'nvim-tree/nvim-web-devicons',-- optional
+    },
+    config = function ()
+        require("nvim-tree").setup{}
+    end
+}
