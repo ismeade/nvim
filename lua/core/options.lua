@@ -10,6 +10,8 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
+opt.scrolloff = 4
+
 -- 防止包裹
 opt.wrap = false
 

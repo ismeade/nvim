@@ -14,4 +14,13 @@ vim.opt.rtp:prepend(lazypath)
 vim.keymap.set("n", "<leader>pl", ":Lazy<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>ps", ":Lazy sync<CR>", { noremap = true })
 
-require("lazy").setup({{import = "plugins"}})
+require("lazy").setup({
+    spec = {
+		{ import = "plugins" },
+	},
+    change_detection = {
+        -- automatically check for config file changes and reload the ui
+        enabled = false,
+        notify = false, -- get a notification when changes are found
+    },
+})

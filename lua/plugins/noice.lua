@@ -30,6 +30,72 @@ return {
                 inc_rename = false, -- enables an input dialog for inc-rename.nvim
                 lsp_doc_border = false, -- add a border to hover docs and signature help
             },
+            messages = {
+                enabled = false, -- enables the Noice messages UI
+            },
+            notify = {
+                enabled = false,
+            },
+            views = {
+                cmdline_popup = {
+                    position = {
+                        row = 10,
+                        col = "50%",
+                    },
+                    size = {
+                        width = 60,
+                        height = "auto",
+                    },
+                },
+                popupmenu = {
+                    relative = "editor",
+                    position = {
+                        row = 8,
+                        col = "50%",
+                    },
+                    size = {
+                        width = 60,
+                        height = 10,
+                    },
+                    border = {
+                        style = "rounded",
+                        padding = { 0, 1 },
+                    },
+                    win_options = {
+                        winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+                    },
+                },
+            },
+            -- NO NERD FONT
+            cmdline = {
+                format = {
+                    cmdline = { icon = ">" },
+                    search_down = { icon = "⌄" },
+                    search_up = { icon = "⌃" },
+                    filter = { icon = "$" },
+                    lua = { icon = "" },
+                    help = { icon = "?" },
+                },
+            },
+            format = {
+                level = {
+                    icons = {
+                        error = "",
+                        warn = "",
+                        info = "",
+                    },
+                },
+            },
+            popupmenu = {
+                kind_icons = false,
+            },
+            inc_rename = {
+                cmdline = {
+                    format = {
+                        IncRename = { icon = "" }
+                    },
+                },
+            },
         })
     end
 }
