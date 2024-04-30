@@ -14,7 +14,8 @@ return {
                 "vimdoc",
                 "query",
                 "json",
-                "yaml" },
+                "yaml"
+            },
 
             highlight = {
                 enable = true,

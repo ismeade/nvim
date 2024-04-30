@@ -4,5 +4,3 @@ require("core.plugins")
 
 require("plugins.telescope")
 require("plugins.autopairs")
-
-
