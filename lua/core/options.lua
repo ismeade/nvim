@@ -12,8 +12,10 @@ opt.autoindent = true
 
 opt.scrolloff = 4
 
+
 -- 防止包裹
-opt.wrap = false
+opt.wrap = true
+-- opt.wrap = false
 
 -- 光标行
 opt.cursorline = true
