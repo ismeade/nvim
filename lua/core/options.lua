@@ -42,3 +42,12 @@ opt.background = "dark" -- or "light" for light mode
 
 -- 其他
 vim.g.loaded_perl_provider = 0
+
+
+-- local augroup = vim.api.nvim_create_augroup
+-- local autocmd = vim.api.nvim_create_autocmd
+-- augroup("__formatter__", { clear = true })
+-- autocmd("BufWritePost", {
+--     group = "__formatter__",
+--     command = ":FormatWrite",
+-- })

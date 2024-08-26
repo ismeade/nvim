@@ -9,6 +9,12 @@ return {
         keymaps.set('n', '<leader>sg', builtin.live_grep, {})  -- 环境里要安装ripgrep
         keymaps.set('n', '<leader>sb', builtin.buffers, {})
         keymaps.set('n', '<leader>sh', builtin.help_tags, {})
+
+        -- require('telescope').setup{
+        --     defaults = {
+        --         color_devicons = false
+        --     }
+        -- }
     end
 }
 

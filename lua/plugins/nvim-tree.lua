@@ -28,12 +28,12 @@ return {
                     web_devicons = {
                         file = {
                             -- 关闭文件图标类型
-                            enable = false
+                            enable = true
                         }
                     },
                     -- 是否显示图标
                     show = {
-                        file = false,
+                        file = true,
                         folder = true,
                         folder_arrow = true,
                         git = true,
