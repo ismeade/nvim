@@ -22,6 +22,27 @@ return {
         'nvim-tree/nvim-web-devicons',-- optional
     },
     config = function ()
-        require("nvim-tree").setup{}
+        require("nvim-tree").setup({
+            renderer = {
+                icons = {
+                    web_devicons = {
+                        file = {
+                            -- 关闭文件图标类型
+                            enable = false
+                        }
+                    },
+                    -- 是否显示图标
+                    show = {
+                        file = false,
+                        folder = true,
+                        folder_arrow = true,
+                        git = true,
+                        modified = true,
+                        diagnostics = true,
+                        bookmarks = true,
+                    }
+                }
+            }
+        })
     end
 }
