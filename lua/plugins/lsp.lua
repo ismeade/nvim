@@ -1,7 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
     config = function()
-
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         require("lspconfig").lua_ls.setup {
@@ -21,6 +20,14 @@ return {
             }
         }
 
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            pattern = { "*.lua", "*.rs" },
+            callback = function()
+                vim.lsp.buf.format({ timeout_ms = 200 })
+            end,
+            group = format_sync_grp,
+        })
+
         vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
         vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 
@@ -35,6 +42,5 @@ return {
         vim.keymap.set('n', '<leader>gn', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 
         vim.keymap.set('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>')
-
     end
 }
