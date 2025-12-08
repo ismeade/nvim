@@ -29,7 +29,6 @@ return {
             return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
         end
 
-
         cmp.setup({
             snippet = {
                 expand = function(args)

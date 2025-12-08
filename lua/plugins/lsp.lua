@@ -3,25 +3,13 @@ return {
     config = function()
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-        require("lspconfig").lua_ls.setup {
+        vim.lsp.config('lua_ls', {
             capabilities = capabilities,
-        }
+        })
 
-        require("lspconfig").gopls.setup {
-            settings = {
-                ui = {
-                    gopls = {
-                        completion = {
-                            usePlaceholders = true,
-                        },
-                        gofumpt = true,
-                    },
-                }
-            }
-        }
-
+        local format_sync_grp = vim.api.nvim_create_augroup("Format", {})
         vim.api.nvim_create_autocmd("BufWritePre", {
-            pattern = { "*.lua", "*.rs" },
+            pattern = { "*.lua" },
             callback = function()
                 vim.lsp.buf.format({ timeout_ms = 200 })
             end,

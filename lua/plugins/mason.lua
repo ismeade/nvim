@@ -15,7 +15,7 @@ return {
             }
         })
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "gopls" },
+            ensure_installed = { "lua_ls" },
             automatic_installation = true,
         })
         keymaps.set('n', '<leader>lm', ':Mason<CR>')
