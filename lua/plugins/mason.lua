@@ -14,9 +14,20 @@ return {
                 }
             }
         })
+
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls" },
+            ensure_installed = {
+                "lua_ls",
+                "rust_analyzer",
+                "jsonls"
+            },
             automatic_installation = true,
+            function(server_name)
+                lspconfig[server_name].setup({
+                    capabilities = capabilities,
+                    on_attach = on_attach,
+                })
+            end,
         })
         keymaps.set('n', '<leader>lm', ':Mason<CR>')
         keymaps.set('n', '<leader>lu', ':MasonUpdate<CR>')
